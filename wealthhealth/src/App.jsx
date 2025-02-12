@@ -1,16 +1,15 @@
-import Header from "./components/Header/Header";
-import EmployeeForm from "./components/EmployeeForm/EmployeeForm"
-import { BrowserRouter as Router} from "react-router-dom";
-import "./App.scss";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Employees from "./pages/Employees";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-      <Header />
-      <EmployeeForm/>
-      </div>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/employees" element={<Employees />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
