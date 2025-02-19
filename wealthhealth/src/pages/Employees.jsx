@@ -1,6 +1,7 @@
+import EmployeeList from "../components/EmployeeList/EmployeeList";
+
 const Employees = () => {
-    return <h1>Liste des employés</h1>;
-  };
-  
-  export default Employees;
-  
+    return <EmployeeList />;
+};
+
+export default Employees;
