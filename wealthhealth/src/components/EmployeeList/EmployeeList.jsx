@@ -1,22 +1,10 @@
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 const EmployeeList = () => {
-  // Accéder à l'état des employés depuis Redux
-  const employees = useSelector((state) => state.employees);
-  const isLoading = useSelector((state) => state.isLoading); // Si tu as un état pour indiquer si c'est en cours de chargement
-  const error = useSelector((state) => state.error); // Si tu as un état pour gérer les erreurs
+  const employees = useSelector((state) => state.employees.employees); // Récupérer la liste des employés
 
-  if (isLoading) {
-    return <div>Loading...</div>;  // Affiche un message de chargement
-  }
-
-  if (error) {
-    return <div>Une erreur est survenue : {error}</div>;  // Affiche l'erreur si elle existe
-  }
-
-  // Vérifier si employees est un tableau
-  if (!Array.isArray(employees) || employees.length === 0) {
-    return <div>Aucun employé trouvé.</div>;  // Si ce n'est pas un tableau ou si la liste est vide
+  if (!employees || employees.length === 0) {
+    return <div>No employees found.</div>;
   }
 
   return (
@@ -43,7 +31,7 @@ const EmployeeList = () => {
               <td>{employee.lastName}</td>
               <td>{employee.startDate}</td>
               <td>{employee.department}</td>
-              <td>{employee.birthDate}</td>
+              <td>{employee.dateOfBirth}</td>
               <td>{employee.street}</td>
               <td>{employee.city}</td>
               <td>{employee.state}</td>

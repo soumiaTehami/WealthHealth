@@ -1,7 +1,12 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addEmployee } from "../../redux/slices/employeeSlice";
+
 import "./EmployeeForm.scss";
 
 const EmployeeForm = () => {
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -11,6 +16,7 @@ const EmployeeForm = () => {
     city: "",
     state: "Alabama",
     zipCode: "",
+    department: "",
   });
 
   const handleChange = (e) => {
@@ -19,8 +25,19 @@ const EmployeeForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Employee Data:", formData);
+    dispatch(addEmployee(formData)); // Ajouter l'employé au store Redux
     alert("Employee added successfully!");
+    setFormData({
+      firstName: "",
+      lastName: "",
+      dateOfBirth: "",
+      startDate: "",
+      street: "",
+      city: "",
+      state: "Alabama",
+      zipCode: "",
+      department: "",
+    });
   };
 
   return (
@@ -39,6 +56,9 @@ const EmployeeForm = () => {
       <label>Start Date</label>
       <input type="date" name="startDate" value={formData.startDate} onChange={handleChange} required />
 
+      <label>Department</label>
+      <input type="text" name="department" value={formData.department} onChange={handleChange} required />
+
       <fieldset className="employee-form__address">
         <legend>Address</legend>
         <label>Street</label>
@@ -52,7 +72,6 @@ const EmployeeForm = () => {
           <option value="Alabama">Alabama</option>
           <option value="Alaska">Alaska</option>
           <option value="Arizona">Arizona</option>
-          {/* Ajoute d'autres états ici si nécessaire */}
         </select>
 
         <label>Zip Code</label>
