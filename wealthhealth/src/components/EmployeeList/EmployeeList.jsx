@@ -40,6 +40,7 @@ const EmployeeList = () => {
           entries
         </label>
 
+
         <label>
           Search:
           <input
