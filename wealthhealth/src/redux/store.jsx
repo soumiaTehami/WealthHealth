@@ -12,11 +12,15 @@ const persistConfig = {
 // Création d'un reducer persistant
 const persistedReducer = persistReducer(persistConfig, employeeReducer);
 
-// Configuration du store Redux
+// Configuration du store Redux avec désactivation de la vérification
 const store = configureStore({
   reducer: {
     employees: persistedReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false, // Désactive la vérification des valeurs non sérialisables
+    }),
 });
 
 // Création du persistor

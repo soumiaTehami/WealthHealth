@@ -4,6 +4,11 @@ import "./EmployeeList.scss";
 
 const EmployeeList = () => {
   const employees = useSelector((state) => state.employees.employees);
+  
+
+
+  
+  
   const [searchTerm, setSearchTerm] = useState("");
   const [entriesPerPage, setEntriesPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);

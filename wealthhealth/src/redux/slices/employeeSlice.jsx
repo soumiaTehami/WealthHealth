@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
+import liste from "./Employe.json";
 
 const initialState = {
-  employees: [],
+
+  employees: liste,
 };
 
 const employeeSlice = createSlice({
