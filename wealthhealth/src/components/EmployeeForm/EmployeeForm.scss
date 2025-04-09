@@ -1,52 +1,55 @@
 .employee-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-    &__title {
-      font-size: 22px;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-  
-    label {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-  
-    input, select {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-  
-    &__address {
-      margin-top: 15px;
-      padding: 25px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-    }
-  
-    &__submit {
-      margin-top: 15px;
-      padding: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-  
-      &:hover {
-        background-color: #0056b3;
-      }
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px; /* Augmente la taille de la police pour la lisibilité */
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px; /* Augmente le padding pour rendre les champs plus larges */
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Taille de la police pour améliorer la lisibilité */
+    background-color: #f9f9f9;
+  }
+
+  &__address {
+    margin-top: 15px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa; /* Ajoute un fond légèrement différent */
+  }
+
+  &__submit {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #0056b3;
     }
   }
-  
+}

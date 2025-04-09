@@ -1,22 +1,16 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import "./EmployeeList.scss";
+import liste from "../../redux/slices/Employe.json";
 
 const EmployeeList = () => {
-  const employees = useSelector((state) => state.employees.employees);
-  
-
-
-  
-  
+ 
+  const employees = liste.concat(useSelector((state) => state.employees.employees));
   const [searchTerm, setSearchTerm] = useState("");
   const [entriesPerPage, setEntriesPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
 
-  if (!employees || employees.length === 0) {
-    return <div className="no-employees">No employees found.</div>;
-  }
-
+  
   // Filtrage des employés en fonction du terme de recherche
   const filteredEmployees = employees.filter((employee) =>
     Object.values(employee).some((value) =>
