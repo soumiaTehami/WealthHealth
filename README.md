@@ -60,10 +60,12 @@ npm publish --access public
 ```
 ## Structure du package
 
+```bash
 hrnet_model/
 ├── dist/
 │   └── index.js       # Fichier exporté
 ├── src/
 │   └── model.js       # Logique du modèle
 └── package.json
-
+--
+```

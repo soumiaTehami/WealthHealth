@@ -2,8 +2,6 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addEmployee } from "../../redux/slices/employeeSlice";
 import { Model } from "hrnet_model";
-
-
 import "./EmployeeForm.scss";
 
 const EmployeeForm = () => {
