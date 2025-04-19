@@ -8,7 +8,7 @@ WealthHealth est une application interne de gestion des employés d'une entrepri
 - Stockage des employés avec Redux
 - Modale de confirmation à la création d’un employé
 - Composants réutilisables
-- Formulaire responsive et accessible
+
 
 ---
 
