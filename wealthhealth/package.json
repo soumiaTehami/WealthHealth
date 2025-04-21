@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
-    "hrnet_model--soumia": "^0.1.5",
+    "hrnet_model--soumia": "^0.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
