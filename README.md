@@ -54,7 +54,7 @@ git clone https://github.com/soumiaTehami/WealthHealth.git
 ## 📦 Installation
 
 ```bash
-npm install hrnet_model
+npm install hrnet_model--soumia
 npm publish --access public
 
 ```
